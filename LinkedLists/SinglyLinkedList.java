@@ -24,6 +24,20 @@ class SinglyLinkedList {
         System.out.println("null list is completely traversed");
     }
 
+    //finding length of Singly Linked List
+    public int length(){    //it will return length of linked list
+        if(head==null){
+            return 0;
+        }
+        int count=0;
+        ListNode current=head;
+        while (current!=null) {
+            count++;
+            current=current.next;            
+        }
+        return count;
+    }    
+
     public static void main(String[]args){
         SinglyLinkedList sll=new SinglyLinkedList(); //creating instance of class
         //four nodes whose each next point towards null
@@ -44,6 +58,7 @@ class SinglyLinkedList {
 
         //To display list content
         sll.display();
+        System.out.println("Length of given Linked List:"+sll.length());
     }
     
 }
